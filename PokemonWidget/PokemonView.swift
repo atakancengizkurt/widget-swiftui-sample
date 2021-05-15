@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct PokemonView: View {
+  var pokemon: Pokemon
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      HStack{
+      SpecialImageView(image: Image(pokemon.imageName))
+        .frame(width: 100, height: 100, alignment: .center)
+        .padding()
+        
+        Spacer()
+        
+        VStack{
+          Text(pokemon.name)
+            .font(.largeTitle)
+            .bold()
+            .foregroundColor(.yellow)
+          Text(pokemon.type)
+            .bold()
+        }
+        Spacer()
+      }.frame(width: UIScreen.main.bounds.width,  alignment: .center)
     }
 }
 
 struct PokemonView_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonView()
+      PokemonView(pokemon: pikachu)
     }
 }

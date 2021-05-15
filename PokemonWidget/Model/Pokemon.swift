@@ -21,3 +21,5 @@ struct Pokemon: Identifiable, Codable {
 let pikachu = Pokemon(imageName: "pikachu", name: "Pikachu", type: "Mouse Pokemon")
 let charmander = Pokemon(imageName: "charmander", name: "Charmander", type: "Lizard Pokemon")
 let jigglypuff = Pokemon(imageName: "jigglypuff", name: "Jigglypuff", type: "Fairy Pokemon")
+
+let pokemonArray = [pikachu, charmander,jigglypuff]
